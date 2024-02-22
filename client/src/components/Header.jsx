@@ -2,6 +2,8 @@ import { Button, Navbar, TextInput } from "flowbite-react";
 import { Link, useLocation } from "react-router-dom";
 import { AiOutlineSearch } from "react-icons/ai";
 import { FaMoon } from "react-icons/fa";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 export default function Header() {
   const path = useLocation().pathname;
@@ -39,7 +41,10 @@ export default function Header() {
             Sign In
           </Button>
         </Link>
-        <Navbar.Toggle />
+        {/* <Navbar.Toggle /> */}
+        <Navbar.Toggle aria-controls="basic-navbar-nav">
+          <FontAwesomeIcon icon={faBars} className="custom-toggle-icon" />
+        </Navbar.Toggle>
       </div>
       <Navbar.Collapse>
         <Navbar.Link active={path === "/"} as={"div"}>
