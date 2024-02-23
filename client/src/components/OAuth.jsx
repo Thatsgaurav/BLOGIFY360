@@ -1,5 +1,6 @@
 import { Button } from "flowbite-react";
 import { AiFillGoogleCircle } from "react-icons/ai";
+import { FcGoogle } from "react-icons/fc";
 import { GoogleAuthProvider, signInWithPopup, getAuth } from "firebase/auth";
 import { app } from "../firebase";
 import { useDispatch } from "react-redux";
@@ -34,13 +35,8 @@ export default function OAuth() {
     }
   };
   return (
-    <Button
-      type="button"
-      gradientDuoTone="cyanToBlue"
-      outline
-      onClick={handleGoogleClick}
-    >
-      <AiFillGoogleCircle className="w-6 h-6 mr-2" />
+    <Button type="button" color="light" outline onClick={handleGoogleClick}>
+      <FcGoogle className="w-6 h-6 mr-2" />
       Continue with Google
     </Button>
   );

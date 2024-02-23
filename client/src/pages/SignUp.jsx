@@ -50,6 +50,7 @@ export default function SignUp() {
               Blogify360
             </span>
           </Link>
+          <img src="src/assets/signup.svg" className="mt-10" />
           <p className="text-sm mt-5">
             This is a demo project. You can sign up with your email and password
             or with Google.
@@ -90,6 +91,7 @@ export default function SignUp() {
               gradientDuoTone="pinkToOrange"
               type="submit"
               disabled={loading}
+              outline
             >
               {loading ? (
                 <>
