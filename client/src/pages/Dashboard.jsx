@@ -8,8 +8,10 @@ export default function Dashboard() {
   const [tab, setTab] = useState("");
   useEffect(() => {
     const urlParams = new URLSearchParams(location.search);
-    const tabFormUrl = urlParams.get("tab");
-    console.log(tabFormUrl);
+    const tabFromUrl = urlParams.get("tab");
+    if (tabFromUrl) {
+      setTab(tabFromUrl);
+    }
   }, [location.search]);
   return (
     <div className="min-h-screen flex flex-col md:flex-row">
